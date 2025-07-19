@@ -21,3 +21,10 @@ export type RestaurantIconType =
 	| 'restaurant_korean'
 
 export type FoodSurveyIconType = TasteIconType | FoodIconType | RestaurantIconType
+
+export interface SurveyOption {
+	id: string
+	label: string
+	sublabel: string
+	icon: FoodSurveyIconType
+}
