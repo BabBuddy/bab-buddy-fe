@@ -4,17 +4,6 @@ import { DislikedFoodInput } from '@/shared/components/DislikedFoodInput'
 
 const DislikedFoodSurvey: React.FC = () => {
 	const [selectedFoods, setSelectedFoods] = useState<string[]>([])
-	const [inputValue, setInputValue] = useState('')
-
-	const handleAddFood = () => {
-		if (selectedFoods.length >= 20) {
-			return
-		}
-		if (inputValue.trim() && !selectedFoods.includes(inputValue.trim())) {
-			setSelectedFoods((prev) => [...prev, inputValue.trim()])
-			setInputValue('')
-		}
-	}
 
 	return (
 		<div className="flex-1">
